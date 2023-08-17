@@ -1,5 +1,5 @@
 {
-    "name": "laminas/laminas-mvc-console",
+    "name": "laminass/laminas-mvc-console",
     "description": "Integration between laminas-mvc and laminas-console",
     "license": "BSD-3-Clause",
     "keywords": [
@@ -29,25 +29,25 @@
         }
     },
     "require": {
-        "php": "^7.3 || ~8.0.0",
-        "container-interop/container-interop": "^1.1",
-        "laminas/laminas-console": "^2.6",
-        "laminas/laminas-eventmanager": "^3.3",
-        "laminas/laminas-modulemanager": "^2.7.1",
-        "laminas/laminas-mvc": "^3.0.3",
-        "laminas/laminas-router": "^3.0",
-        "laminas/laminas-servicemanager": "^3.3",
-        "laminas/laminas-stdlib": "^3.3",
-        "laminas/laminas-text": "^2.6",
-        "laminas/laminas-view": "^2.11.3",
-        "laminas/laminas-zendframework-bridge": "^1.0"
+        "php": ">=8.1",
+        "container-interop/container-interop": ">=1.1",
+        "laminas/laminas-console": ">=2.6",
+        "laminas/laminas-eventmanager": ">=3.3",
+        "laminas/laminas-modulemanager": ">=2.7.1",
+        "laminas/laminas-mvc": ">=3.0.3",
+        "laminas/laminas-router": ">=3.0",
+        "laminas/laminas-servicemanager": ">=3.3",
+        "laminas/laminas-stdlib": ">=3.3",
+        "laminas/laminas-text": ">=2.6",
+        "laminas/laminas-view": ">=2.11.3",
+        "laminas/laminas-zendframework-bridge": ">=1.0"
     },
     "require-dev": {
         "laminas/laminas-coding-standard": "~1.0.0",
-        "laminas/laminas-filter": "^2.6.1",
-        "phpspec/prophecy": "^1.12.0",
-        "phpspec/prophecy-phpunit": "^2.0",
-        "phpunit/phpunit": "^9.3"
+        "laminas/laminas-filter": ">=2.6.1",
+        "phpspec/prophecy": ">=1.12.0",
+        "phpspec/prophecy-phpunit": ">=2.0",
+        "phpunit/phpunit": ">=9.3"
     },
     "conflict": {
         "laminas/laminas-mvc": "<3.0.0"

@@ -33,7 +33,7 @@ class ConsoleRouteNotFoundStrategyFactoryTest extends TestCase
         $this->assertTrue($strategy->displayNotFoundReason());
     }
 
-    public function overrideDisplayNotFoundReasonConfig()
+    public static function overrideDisplayNotFoundReasonConfig()
     {
         return [
             'console' => [[
@@ -61,4 +61,7 @@ class ConsoleRouteNotFoundStrategyFactoryTest extends TestCase
         $this->assertInstanceOf(RouteNotFoundStrategy::class, $strategy);
         $this->assertFalse($strategy->displayNotFoundReason());
     }
+
+    protected $container;
+    protected $factory;
 }

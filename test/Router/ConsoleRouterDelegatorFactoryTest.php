@@ -19,7 +19,7 @@ class ConsoleRouterDelegatorFactoryTest extends TestCase
     use FactoryEnvironmentTrait;
     use ProphecyTrait;
 
-    public function environments()
+    public static function environments()
     {
         return [
             'console' => [true],
@@ -66,7 +66,7 @@ class ConsoleRouterDelegatorFactoryTest extends TestCase
         ));
     }
 
-    public function routerServiceNames()
+    public static function routerServiceNames()
     {
         return [
             ['router'],

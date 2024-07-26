@@ -19,7 +19,7 @@ class CatchallTest extends TestCase
 {
     use ProphecyTrait;
 
-    public function provideFactoryOptions()
+    public static function provideFactoryOptions()
     {
         return [
             [[]],

@@ -19,15 +19,13 @@ use Laminas\ServiceManager\ServiceManager;
 use Laminas\Stdlib\Response;
 use Laminas\View\Model;
 use PHPUnit\Framework\TestCase;
-use Prophecy\PhpUnit\ProphecyTrait;
 
 class DefaultRenderingStrategyTest extends TestCase
 {
     use EventListenerIntrospectionTrait;
-    use ProphecyTrait;
 
     /**
-     * @var Renderer
+     * @var Renderer|\PHPUnit\Framework\MockObject\MockObject
      */
     protected $renderer;
 
@@ -38,8 +36,8 @@ class DefaultRenderingStrategyTest extends TestCase
 
     public function setUp() : void
     {
-        $this->renderer = $this->prophesize(Renderer::class);
-        $this->strategy = new DefaultRenderingStrategy($this->renderer->reveal());
+        $this->renderer = $this->createMock(Renderer::class);
+        $this->strategy = new DefaultRenderingStrategy($this->renderer);
     }
 
     public function testAttachesRendererAtExpectedPriority()
@@ -92,7 +90,11 @@ class DefaultRenderingStrategyTest extends TestCase
 
         $model    = new Model\ViewModel(['content' => 'Page not found']);
 
-        $this->renderer->render($model)->willReturn('');
+        $this->renderer
+            ->expects($this->any())
+            ->method('render')
+            ->with($model)
+            ->willReturn('');
 
         $response = new Response();
         $event->setResult($model);
@@ -126,7 +128,11 @@ class DefaultRenderingStrategyTest extends TestCase
 
         $model    = true;
 
-        $this->renderer->render($model)->willReturn('');
+        $this->renderer
+            ->expects($this->any())
+            ->method('render')
+            ->with($model)
+            ->willReturn('');
 
         $response = new Response();
         $event->setResult($model);

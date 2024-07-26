@@ -43,7 +43,7 @@ class ConsoleExceptionStrategyFactoryTest extends TestCase
         $this->assertEquals($plainStrategy->getMessage(), $strategy->getMessage());
     }
 
-    public function overrideDisplayExceptionsConfiguration()
+    public static function overrideDisplayExceptionsConfiguration()
     {
         return [
             'console' => [[
@@ -72,7 +72,7 @@ class ConsoleExceptionStrategyFactoryTest extends TestCase
         $this->assertFalse($strategy->displayExceptions());
     }
 
-    public function overrideExceptionMessageConfiguration()
+    public static function overrideExceptionMessageConfiguration()
     {
         return [
             'console' => [[
@@ -100,4 +100,7 @@ class ConsoleExceptionStrategyFactoryTest extends TestCase
         $this->assertInstanceOf(ExceptionStrategy::class, $strategy);
         $this->assertEquals($expected, $strategy->getMessage());
     }
+
+    protected $container;
+    protected $factory;
 }

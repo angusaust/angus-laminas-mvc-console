@@ -81,4 +81,7 @@ class ConsoleRouterFactoryTest extends TestCase
         $this->assertInstanceOf(SimpleRouteStack::class, $router);
         $this->assertCount(1, $router->getRoutes());
     }
+
+    protected $container;
+    protected $factory;
 }

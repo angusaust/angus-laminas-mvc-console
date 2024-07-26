@@ -116,7 +116,7 @@ class RouteNotFoundStrategyTest extends TestCase
         $this->assertNull($this->strategy->handleRouteNotFoundError($event->reveal()));
     }
 
-    public function validErrorTypes()
+    public static function validErrorTypes()
     {
         // @codingStandardsIgnoreStart
         return [
@@ -242,7 +242,7 @@ class RouteNotFoundStrategyTest extends TestCase
         $this->assertNull($this->strategy->handleRouteNotFoundError($event->reveal()));
     }
 
-    public function throwables()
+    public static function throwables()
     {
         $throwables = ['exception' => [\Exception::class]];
 

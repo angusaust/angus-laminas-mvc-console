@@ -312,6 +312,7 @@ class RouteNotFoundStrategy extends AbstractListenerAggregate
 
                     $tableCols = 2;
                     $tableType = 1;
+                    if ($table === false) $table = [];
                     $table[]   = [$a, $b];
                     continue;
                 }
@@ -332,6 +333,7 @@ class RouteNotFoundStrategy extends AbstractListenerAggregate
 
                     $tableCols = $count;
                     $tableType = 2;
+                    if ($table === false) $table = [];
                     $table[]   = $b;
                     continue;
                 }

@@ -93,4 +93,6 @@ class InjectNamedConsoleParamsListenerTest extends TestCase
 
         $this->assertNull($this->listener->injectNamedParams($event->reveal()));
     }
+
+    protected $listener;
 }

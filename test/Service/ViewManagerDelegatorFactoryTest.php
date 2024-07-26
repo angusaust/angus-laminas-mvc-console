@@ -53,4 +53,6 @@ class ViewManagerDelegatorFactoryTest extends TestCase
         $result = $this->factory->__invoke($container->reveal(), 'ViewManager', $callback);
         $this->assertSame($viewManager, $result);
     }
+
+    protected $factory;
 }

@@ -48,4 +48,6 @@ class ConsoleRequestDelegatorFactoryTest extends TestCase
         $result = $this->factory->__invoke($this->createContainer(), 'Request', $callback);
         $this->assertInstanceOf(Request::class, $result);
     }
+
+    protected $factory;
 }

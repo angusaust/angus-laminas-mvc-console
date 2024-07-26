@@ -960,7 +960,7 @@ class SimpleTest extends TestCase
         $request = new ConsoleRequest($arguments);
 
         $routeMatcher = $this->getMockBuilder(RouteMatcherInterface::class)
-            ->setMethods(['match'])
+            ->onlyMethods(['match'])
             ->getMock();
         $routeMatcher->expects($this->once())->method('match')
             ->with(['--foo=bar']);
@@ -975,7 +975,7 @@ class SimpleTest extends TestCase
         new Simple(new \stdClass());
     }
 
-    public function invalidOptions()
+    public static function invalidOptions()
     {
         return [
             'null'       => [null],
@@ -1000,7 +1000,7 @@ class SimpleTest extends TestCase
         Simple::factory($options);
     }
 
-    public function optionsThatDoNotContainRoute()
+    public static function optionsThatDoNotContainRoute()
     {
         return [
             'empty-array'       => [[]],

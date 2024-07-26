@@ -97,4 +97,9 @@ class ConsoleViewHelperManagerDelegatorFactoryTest extends TestCase
         $this->assertSame($router->reveal(), $reflectionPropertyRouter->getValue($helper));
         $this->assertSame($routeMatch->reveal(), $reflectionPropertyRouteMatch->getValue($helper));
     }
+
+    protected $container;
+    protected $plugins;
+    protected $callback;
+    protected $factory;
 }

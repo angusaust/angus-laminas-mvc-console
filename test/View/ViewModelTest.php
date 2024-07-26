@@ -49,4 +49,6 @@ class ViewModelTest extends TestCase
         $this->model->setResult('FOO');
         $this->assertEquals('FOO', $this->model->getResult());
     }
+
+    protected $model;
 }

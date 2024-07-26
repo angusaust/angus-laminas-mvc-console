@@ -44,7 +44,7 @@ class RendererTest extends TestCase
         $this->assertTrue($this->renderer->canRenderTrees());
     }
 
-    public function invalidModels()
+    public static function invalidModels()
     {
         return [
             'null'       => [null],
@@ -139,4 +139,6 @@ class RendererTest extends TestCase
 
         $this->assertSame('CHILD1CHILD2RESULT', $this->renderer->render($model->reveal()));
     }
+
+    protected $renderer;
 }

@@ -70,4 +70,6 @@ class ConsoleApplicationDelegatorFactoryTest extends TestCase
             $this->factory->__invoke($container->reveal(), 'Application', $callback)
         );
     }
+
+    protected $factory;
 }

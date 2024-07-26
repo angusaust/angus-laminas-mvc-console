@@ -15,7 +15,7 @@ use PHPUnit\Framework\TestCase;
 
 class SimpleRouteStackTest extends TestCase
 {
-    public function routeTypeProvider()
+    public static function routeTypeProvider()
     {
         $catchallOpts = ['defaults' => []];
         $simpleOpts   = ['route' => 'test'];

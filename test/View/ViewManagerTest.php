@@ -164,8 +164,8 @@ class ViewManagerTest extends TestCase
         $r = new ReflectionClass(EventManager::class);
 
         if ($r->hasMethod('setSharedManager')) {
-            $events = new EventManager();
-            $events->setSharedManager(new SharedEventManager());
+            $sharedEventManager = new SharedEventManager();
+            $events = new EventManager($sharedEventManager);
             return $events;
         }
 
@@ -185,7 +185,7 @@ class ViewManagerTest extends TestCase
     /**
      * @return array
      */
-    public function viewManagerConfiguration()
+    public static function viewManagerConfiguration()
     {
         return [
             'standard' => [
@@ -341,7 +341,7 @@ class ViewManagerTest extends TestCase
         $this->assertNull($manager->onBootstrap($event->reveal()));
     }
 
-    public function mvcStrategyConfiguration()
+    public static function mvcStrategyConfiguration()
     {
         $baseConfig = [
             'view_manager' => [
@@ -392,7 +392,7 @@ class ViewManagerTest extends TestCase
         $this->assertNull($manager->onBootstrap($event->reveal()));
     }
 
-    public function viewStrategyConfiguration()
+    public static function viewStrategyConfiguration()
     {
         $baseConfig = [
             'view_manager' => [

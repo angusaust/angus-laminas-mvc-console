@@ -59,7 +59,7 @@ class ExceptionStrategyTest extends TestCase
         $this->assertTrue($this->strategy->displayExceptions(), 'displayExceptions should be true by default');
     }
 
-    public function messageTokenProvider()
+    public static function messageTokenProvider()
     {
         return [
             [':className', true],
@@ -91,7 +91,7 @@ class ExceptionStrategyTest extends TestCase
         }
     }
 
-    public function previousMessageTokenProvider()
+    public static function previousMessageTokenProvider()
     {
         return [
             [':className', true],
@@ -190,7 +190,7 @@ class ExceptionStrategyTest extends TestCase
         }
     }
 
-    public function throwables()
+    public static function throwables()
     {
         $throwables = ['exception' => [\Exception::class]];
 
@@ -242,7 +242,7 @@ class ExceptionStrategyTest extends TestCase
         $exception = null;
         $i         = 0;
         do {
-            $exception = new \Exception($messages[$i], null, $exception);
+            $exception = new \Exception($messages[$i], 0, $exception);
             $i++;
         } while ($i < count($messages));
 
@@ -260,7 +260,7 @@ class ExceptionStrategyTest extends TestCase
         }
     }
 
-    public function displayExceptionFlags()
+    public static function displayExceptionFlags()
     {
         return [
             'true'  => [true],

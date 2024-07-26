@@ -98,4 +98,6 @@ class CreateViewModelListenerTest extends TestCase
         $result = $event->getResult();
         $this->assertInstanceOf(ConsoleModel::class, $result);
     }
+
+    protected $listener;
 }

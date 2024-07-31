@@ -1,8 +1,7 @@
 # laminas-mvc-console
 
 
-[![Build Status](https://travis-ci.com/laminas/laminas-mvc-console.svg?branch=master)](https://travis-ci.com/laminas/laminas-mvc-console)
-[![Coverage Status](https://coveralls.io/repos/github/laminas/laminas-mvc-console/badge.svg?branch=master)](https://coveralls.io/github/laminas/laminas-mvc-console?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/angusaust/angus-laminas-mvc-console/badge.svg?branch=angus)](https://coveralls.io/github/angusaust/angus-laminas-mvc-console?branch=angus)
 
 laminas-mvc-console provides integration between:
 
@@ -20,7 +19,7 @@ three components.
 ## Installation
 
 ```console
-$ composer require laminas/laminas-mvc-console
+$ composer require angus/laminas-mvc-console
 ```
 
 Assuming you are using the [component

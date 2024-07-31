@@ -1,5 +1,5 @@
 {
-    "name": "laminass/laminas-mvc-console",
+    "name": "angus/laminas-mvc-console",
     "description": "Integration between laminas-mvc and laminas-console",
     "license": "BSD-3-Clause",
     "keywords": [
@@ -20,10 +20,6 @@
         "sort-packages": true
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "1.2.x-dev",
-            "dev-develop": "1.3.x-dev"
-        },
         "laminas": {
             "component": "Laminas\\Mvc\\Console"
         }

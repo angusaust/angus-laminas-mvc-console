@@ -29,6 +29,7 @@
     },
     "require": {
         "php": "^8.2",
+        "angus/laminas-console": "1.0.4",
         "container-interop/container-interop": ">=1.2.0",
         "laminas/laminas-eventmanager": ">=3.15.0",
         "laminas/laminas-modulemanager": ">=2.19.0",
@@ -38,8 +39,7 @@
         "laminas/laminas-stdlib": ">=3.21.0",
         "laminas/laminas-text": ">=2.13.0",
         "laminas/laminas-view": ">=2.44.0",
-        "laminas/laminas-zendframework-bridge": ">=1.8.0",
-        "portospire/laminas-console": ">=2.8.1"
+        "laminas/laminas-zendframework-bridge": ">=1.8.0"
     },
     "require-dev": {
         "laminas/laminas-coding-standard": "~3.1.0",
